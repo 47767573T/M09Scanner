@@ -9,13 +9,13 @@ import java.util.concurrent.Executors;
 public class Runner{
 
     static int ini = 1;
-    static int fin = 100;
+    static int fin = 65535;
 
     public static void main(String[] args) {
 
         String ip = "172.31.83.41";
 
-        for (int port = 1; port < 65535; port++) {
+        for (int port = ini; port < fin; port++) {
             try {
               //  System.out.println("probando puerto: "+port);
                 Socket socket = new Socket(ip, port);
